@@ -1,0 +1,38 @@
+see how we use pyhton and use end for replacing indentation
+<!doctype html>
+<html>
+   <body>
+      {% if marks>50 %}
+         <h1> Your result is pass!</h1>
+      {% else %}
+         <h1>Your result is fail</h1>
+      {% endif %}
+   </body>
+</html>
+
+<!doctype html>
+<html>
+   <body>
+      <table border = 1>
+         {% for key, value in result.items() %}
+            <tr>
+               <th> {{ key }} </th>
+               <td> {{ value }} </td>
+            </tr>
+         {% endfor %}
+      </table>
+   </body>
+</html>
+
+
+//to add js files
+<html>
+   <head>
+      <script type = "text/javascript" 
+         src = "{{ url_for('static', filename = 'hello.js') }}" ></script>
+   </head>
+   
+   <body>
+      <input type = "button" onclick = "sayHello()" value = "Say Hello" />
+   </body>
+</html>
