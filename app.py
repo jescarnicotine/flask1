@@ -1,6 +1,6 @@
 # importing modules 
-from flask import Flask, render_template 
-
+# from flask import Flask, render_template 
+from flask import Flask
 # declaring app name 
 app = Flask(__name__) 
 
@@ -11,11 +11,12 @@ Pokemons =["Pikachu", "Charizard", "Squirtle", "Jigglypuff",
 # defining home page 
 @app.route('/') 
 def homepage():
+	return "hello"
 
 
 # returning index.html and list 
 # and length of list to html page 
-	return render_template("index.html", len = len(Pokemons), Pokemons = Pokemons) 
+	# return render_template("index.html", len = len(Pokemons), Pokemons = Pokemons) 
 
 if __name__ == '__main__':
 
